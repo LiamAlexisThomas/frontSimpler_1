@@ -1,28 +1,29 @@
 import { BottomNavigation } from "react-native-paper";
 import { useState } from "react";
+import Home from '../screens/home'
+import NewSubject from '../screens/newsubjet'
 
 export default TabsScreens = () => {
   const [index, setIndex] = useState(0);
 
   const [routes] = useState([
     {
-      key: "",
-      title: "",
-      focusedIcon: "",
-      unfocusedIcon: "",
-      color: "",
+      key: "Home",
+      title: "Inicio",
+      focusedIcon: "home",
+      unfocusedIcon: "home-cicle",
     },
     {
-      key: "",
-      title: "",
-      focusedIcon: "",
-      unfocusedIcon: "",
+      key: "NewSubject",
+      title: "Nueva Materia",
+      focusedIcon: "home",
+      unfocusedIcon: "home",
     },
   ]);
 
   const renderScene = BottomNavigation.SceneMap({
-    key: vista,
-    key: vista,
+    Home: Home,
+    NewSubject: NewSubject,
   });
 
   return (

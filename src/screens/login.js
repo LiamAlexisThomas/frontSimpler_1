@@ -13,13 +13,14 @@ import PasswordInput from "../components/passinput";
 import Boton from "../components/boton";
 import { loginCheck } from "../apis/login";
 
-export default Login = () => {
+export default Login = ({navigator}) => {
   const [dni, setDni] = useState();
   const [password, setPassword] = useState();
 
   const handleLogin = async () => {
-    const Data = await loginCheck(dni, password);
-    console.log(Data);
+    navigator.navigator('tabs')
+    // const Data = await loginCheck(dni, password);
+    // console.log(Data);
   };
 
   return (
